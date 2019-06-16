@@ -18,8 +18,8 @@ class Shortener extends React.Component{
   render() {
     return (
       <div>
-       <input type="text" value={this.state.url} onChange={this.handleChange} />
-       <a className="btn btn-primary" href={`/new/${this.state.url}`}>Get Url</a>
+       <input type="text" value={this.state.url} onChange={this.handleChange} style={{padding: '5px'}} />
+       <a className="btn btn-primary" href={`/new/${this.state.url}`} style={{padding: '10px'}}>Get Url</a>
       </div>
     );
   }
