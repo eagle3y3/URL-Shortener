@@ -44,6 +44,7 @@ app.get('/:urlToForward', (req, res, next) => {
       else{
         const re = new RegExp("^(http|https)://", "i");
         const strTocheck = data.originalUrl;
+        console.log(strTocheck);
         if(re.test(strTocheck) === true){
           res.redirect(301, data.originalUrl)
           }
