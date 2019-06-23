@@ -15,11 +15,11 @@ app.use(express.static(__dirname + '/public'));
 //creates database entry
 app.get('/new/:urlShorten(*)', (req, res, next) => {
   var {urlShorten} = req.params;
-  var regex = /[-a-zA-Z0-9@:%_\+.~#?&//=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~#?&//=]*)?/gi;
+  const regex = /[-a-zA-Z0-9@:%_\+.~#?&//=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~#?&//=]*)?/gi;
   if(regex.test(urlShorten)===true){
-    var short = Math.floor(Math.random()*100000).toString()
+    const short = Math.floor(Math.random()*100000).toString()
 
-    var data = new shortUrl(
+    const data = new shortUrl(
       {
       originalUrl: urlShorten,
       shorterUrl: short
@@ -38,12 +38,12 @@ app.get('/new/:urlShorten(*)', (req, res, next) => {
 
 //Query database and forward to originalUrl
 app.get('/:urlToForward', (req, res, next) => {
-  var shorterUrl = req.params.urlToForward
+  const shorterUrl = req.params.urlToForward
   shortUrl.findOne({'shorterUrl' : shorterUrl }, (err,data) =>{
     if(err){ return res.send("Error reading database.");}
       else{
-        var re = new RegExp("^(http|https)://", "i");
-        var strTocheck = data.originalUrl
+        const re = new RegExp("^(http|https)://", "i");
+        const strTocheck = data.originalUrl;
         if(re.test(strTocheck) === true){
           res.redirect(301, data.originalUrl)
           }
