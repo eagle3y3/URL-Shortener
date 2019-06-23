@@ -1,7 +1,11 @@
 const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
+<<<<<<< HEAD
 const mongoose = require('mongoose');
+=======
+const mongoose = require("mongoose");
+>>>>>>> c36073b682a6078a4eeb4a846c29f43f386dad31
 const cors = require("cors")
 const portNumber = process.env.PORT || '3000';
 const shortUrl = require('./models/shortUrl')
