@@ -10,7 +10,5 @@ const urlSchema = new Schema({
 
 const ModelClass = mongoose.model('shortUrl', urlSchema);
 
-ModelClass.findOne({ originalUrl: String }, function(err, obj){
-  console.log(obj);
-});
+
 module.exports = ModelClass;
