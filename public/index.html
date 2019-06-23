@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <title>URL Shortner</title>
+    <base href="/">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Load React. -->
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+    <!-- Load  React component. -->
+    <script type="text/babel" src="like_button.js"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+  </head>
+  <body>
+      <header>
+        <h3><b>URL Shortner Microservice</b></h3>
+        <h5>Technologies: Node, Express, MongoDB, HTML/CSS, Bootstrap</h5>
+      </header>
+      <h4>User Stories</h4>
+      <ol>
+        <li>I can POST a URL to <code>[project_url]/api/shorturl/new</code> and I will receive a shortened URL in the JSON response.
+Example : <code>{"original_url":"www.google.com","short_url":1}</code></li>
+        <li>If I pass an invalid URL that doesn't follow the http(s)://www.example.com(/more/routes) format, the JSON response will contain an error like {"error":"invalid URL"}</li>
+        HINT: to be sure that the submitted url points to a valid site you can use the function dns.lookup(host, cb) from the dns core module.
+        <li>When I visit the shortened URL, it will redirect me to my original link</li>
+      </ol>
+      <h4>Short Url Creation</h4>
+      <code>example: POST [project_url]/api/shorturl/new - https://www.google.com</code>
+      <div id="root"></div>
+
+      <h4>Example Usage: </h4>
+      <a href="#" target="_blank">[this_project_url]/api/shorturl/3</a>
+    	<!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+      <h4>Expected Output: </h4>
+      <p>google.com</p>
+  </body>
+  <footer>By Lester Hairston</footer>
+
+
+</html>

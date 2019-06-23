@@ -1,0 +1,39 @@
+body {
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	color: #222;
+	background-color: #FaFaFa;
+	text-align: center;
+	line-height: 1.4em;
+}
+
+div {
+  padding: 10px;
+}
+
+ol {
+	list-style-position: inside;
+  padding-left: 5em;
+  padding-right: 5em;
+  margin-left: 35px;
+  margin-right: 35px;
+}
+
+ol, ul, p {
+  padding-left: 5em;
+  padding-right: 5em;
+  margin-left: 35px;
+  margin-right: 35px;
+}
+
+li {
+  padding-bottom: 1em;
+}
+code{
+  padding: 10px;
+}
+
+
+footer {
+	margin-top: 40px;
+}
